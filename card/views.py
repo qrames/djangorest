@@ -8,9 +8,14 @@
 
 from rest_framework import viewsets
 
-from .serializers import CardSerializer
-from .models import Card
+from .serializers import CardSerializer, ListSerializer
+from .models import Card, List
 
 class CardViewSet(viewsets.ModelViewSet):
     queryset = Card.objects.all()
     serializer_class = CardSerializer
+
+
+class ListViewSet(viewsets.ModelViewSet):
+    queryset = List.objects.all()
+    serializer_class = ListSerializer
