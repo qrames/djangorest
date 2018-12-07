@@ -11,4 +11,4 @@ class CardSerializer(serializers.ModelSerializer):
         model = Card
         # Vous pouvez ajouter un fields pour filtrer les
         # champs du modèle à sérialiser
-        fields = ('title', 'content')
+        fields = ('id', 'title', 'content')
