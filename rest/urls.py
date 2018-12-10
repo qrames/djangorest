@@ -16,10 +16,11 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from rest_framework import routers
-from card.views import CardViewSet
+from card.views import CardViewSet, ListViewSet
 
 
 router = routers.DefaultRouter()
+router.register(r'lists', ListViewSet)
 router.register(r'cards', CardViewSet)
 
 urlpatterns = [

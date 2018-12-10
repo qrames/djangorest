@@ -17,5 +17,5 @@ class CardViewSet(viewsets.ModelViewSet):
 
 
 class ListViewSet(viewsets.ModelViewSet):
-    queryset = List.objects.all()
+    queryset = List.objects.order_by("order")
     serializer_class = ListSerializer
